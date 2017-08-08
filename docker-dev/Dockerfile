@@ -1,0 +1,6 @@
+FROM fedora:25
+
+RUN dnf install -y gcc redhat-rpm-config \
+                   git patch findutils \
+                   bzip2 xz \
+                   rsync
