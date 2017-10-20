@@ -1,4 +1,4 @@
-FROM fedora:25
+FROM fedora:26
 
 RUN dnf -y install dnf-plugins-core && \
     dnf config-manager \
