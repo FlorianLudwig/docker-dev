@@ -1,5 +1,7 @@
 FROM fedora:26
 
+ENV HOME /tmp/home
+
 RUN dnf -y install dnf-plugins-core && \
     dnf config-manager \
         --add-repo \
@@ -14,4 +16,5 @@ RUN dnf -y install dnf-plugins-core && \
                    rsync && \
     ln -s /bin/python3 /bin/python && \
     ln -s /bin/pip3 /bin/pip && \
-    pip install cookiecutter
+    pip install cookiecutter && \
+    mkdir /tmp/home
