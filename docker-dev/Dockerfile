@@ -1,6 +1,6 @@
 FROM fedora:26
 
-ENV HOME /tmp/home
+ENV HOME /tmp/
 
 RUN dnf -y install dnf-plugins-core && \
     dnf config-manager \
@@ -17,4 +17,4 @@ RUN dnf -y install dnf-plugins-core && \
     ln -s /bin/python3 /bin/python && \
     ln -s /bin/pip3 /bin/pip && \
     pip install cookiecutter && \
-    mkdir /tmp/home
+    mkdir /tmp
